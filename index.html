@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casamento Katiely e Matheus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cursiva: ['"Great Vibes"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-pink-50 font-sans text-gray-800">
+
+  <!-- MENU FIXO NO TOPO -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <nav class="max-w-5xl mx-auto flex justify-end space-x-6 py-4 px-6">
+      <a href="lista-de-presentes.html" class="bg-pink-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-600 transition">
+        Lista de Presentes
+      </a>
+      <a href="confirmar-presenca.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">
+        Confirmar Presença
+      </a>
+    </nav>
+  </header>
+
+  <!-- Espaço para conteúdo não ficar escondido atrás do menu fixo -->
+  <div class="pt-16"></div>
+
+  <!-- IMAGEM DO CASAL NO TOPO -->
+  <section class="relative bg-gray-100 py-10">
+    <img
+      src="images/MK.jfif"
+      alt="Matheus e Katiely"
+      class="w-full max-w-3xl h-auto mx-auto block object-cover rounded shadow"
+    />
+    <!-- Nome do casal sobre a imagem -->
+    <div class="absolute bottom-4 right-4 bg-white/80 text-gray-900 px-4 py-2 rounded shadow text-2xl font-cursiva">
+      Matheus & Katiely
+    </div>
+  </section>
+
+  <!-- CONTADOR ESTILIZADO -->
+  <section class="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 py-12 flex flex-col items-center">
+    <h2 class="text-white text-4xl font-semibold mb-8 drop-shadow-lg">Faltam</h2>
+
+    <div
+      id="contadorDias"
+      class="bg-white bg-opacity-90 rounded-xl shadow-xl px-14 py-8 flex flex-col items-center w-48"
+    >
+      <span
+        id="diasRestantes"
+        class="text-7xl font-extrabold text-indigo-700 font-cursiva select-none"
+        style="font-family: 'Great Vibes', cursive;"
+      >
+        0
+      </span>
+      <span class="mt-2 text-indigo-600 uppercase tracking-widest font-semibold select-none">
+        Dias
+      </span>
+    </div>
+
+    <p class="text-white mt-6 text-center max-w-xs font-medium drop-shadow-md">
+      para o grande dia de Matheus & Katiely 💍
+    </p>
+  </section>
+
+  <!-- Cabeçalho principal -->
+  <header style="background-color: #92A8D1;" class="py-12 text-center shadow-md mt-16">
+    <h1 class="text-4xl font-serif text-pink-700">Sejam bem vindos ao nosso site</h1>
+    <p class="mt-2 text-lg italic">Nosso grande dia</p>
+    <p class="mt-1 text-sm text-pink-600">24 de Outubro de 2025</p>
+  </header>
+
+  <!-- Sobre nós -->
+  <section class="max-w-3xl mx-auto mt-16 px-6">
+    <h2 class="text-3xl font-semibold mb-4 text-pink-600">Sobre nós</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Ana e João se conheceram na faculdade e desde então começaram uma linda história de amor. 
+      Agora, estão prontos para celebrar o casamento e convidam você para compartilhar esse momento especial!
+    </p>
+  </section>
+
+  <!-- RSVP -->
+  <section class="max-w-xl mx-auto mt-20 px-6 bg-white rounded-lg shadow-md p-8">
+    <h2 class="text-2xl font-semibold mb-6 text-pink-600 text-center">Confirme sua presença (RSVP)</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Seu nome" required
+        class="w-full border border-pink-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-pink-400" />
+      <input type="email" placeholder="Seu e-mail" required
+        class="w-full border border-pink-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-pink-400" />
+      <button type="submit" 
+        class="w-full bg-pink-500 text-white py-3 rounded-md font-semibold hover:bg-pink-600 transition">
+        Confirmar Presença
+      </button>
+    </form>
+  </section>
+
+  <!-- SCRIPT CONTAGEM -->
+  <script>
+    const eventoData = new Date("2025-10-24T00:00:00").getTime();
+
+    function atualizarDias() {
+      const agora = new Date().getTime();
+      const diferenca = eventoData - agora;
+
+      if (diferenca <= 0) {
+        document.getElementById("diasRestantes").innerText = "0";
+        return;
+      }
+
+      const dias = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
+      document.getElementById("diasRestantes").innerText = dias;
+    }
+
+    atualizarDias();
+    setInterval(atualizarDias, 3600000);
+  </script>
+
+</body>
+</html>
