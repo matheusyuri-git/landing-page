@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lista de Presentes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-pink-50 font-sans text-gray-800 p-6">
+
+  <main class="max-w-3xl mx-auto bg-white rounded-lg shadow p-8">
+    
+    <!-- Botão voltar -->
+    <div class="mb-6">
+      <a
+        href="index.html"
+        class="inline-block bg-pink-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-600 transition"
+      >
+        ← Voltar para Início
+      </a>
+    </div>
+
+    <!-- Título -->
+    <h1 class="text-4xl font-semibold text-pink-600 text-center mb-4">Lista de Presentes 🎁</h1>
+    <p class="text-center text-gray-700 text-lg mb-6">
+      Sua presença é o nosso maior presente, mas se desejar nos presentear, aqui estão algumas sugestões com muito carinho!
+    </p>
+
+  <!-- Grade com fotos dos produtos -->
+<section class="max-w-5xl mx-auto mt-10">
+  <h2 class="text-3xl font-bold text-pink-600 text-center mb-6">Sugestões com Amor 💝</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+    <!-- Produto 1 -->
+    <div class="bg-white rounded-lg shadow p-4 text-center">
+      <img src="images/panela.jpg" alt="Panela Tramontina" class="w-full h-40 object-contain mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-gray-800">Panela Tramontina</h3>
+      <p class="text-pink-600 font-medium">R$ 149,90</p>
+    </div>
+
+    <!-- Produto 2 -->
+    <div class="bg-white rounded-lg shadow p-4 text-center">
+      <img src="images/toalhas.jpg" alt="Jogo de Toalhas" class="w-full h-40 object-contain mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-gray-800">Jogo de Toalhas</h3>
+      <p class="text-pink-600 font-medium">R$ 89,90</p>
+    </div>
+
+    <!-- Produto 3 -->
+    <div class="bg-white rounded-lg shadow p-4 text-center">
+      <img src="images/taças.jpg" alt="Conjunto de Taças" class="w-full h-40 object-contain mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-gray-800">Conjunto de Taças</h3>
+      <p class="text-pink-600 font-medium">R$ 59,90</p>
+    </div>
+
+    <!-- Produto 4 -->
+    <div class="bg-white rounded-lg shadow p-4 text-center">
+      <img src="images/jogo-pratos.jpg" alt="Jogo de Pratos" class="w-full h-40 object-contain mx-auto mb-4" />
+      <h3 class="font-semibold text-lg text-gray-800">Jogo de Pratos</h3>
+      <p class="text-pink-600 font-medium">R$ 119,90</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- PIX -->
+    <div class="mt-10 p-6 bg-pink-100 rounded-md text-center">
+      <p class="text-lg font-medium mb-2 text-pink-700">💗 Preferência por Pix?</p>
+      <p class="mb-2 text-gray-700">Você pode contribuir com qualquer valor através do nosso Pix:</p>
+      <div class="bg-white p-4 rounded shadow text-pink-600 font-semibold mb-2">
+        pixmatheusekatiely@email.com
+      </div>
+      <!-- Botão Copiar -->
+      <button onclick="copiarPix()" class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">
+        Copiar Chave PIX
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Script copiar chave Pix -->
+  <script>
+    function copiarPix() {
+      const chave = "pixmatheusekatiely@email.com";
+      navigator.clipboard.writeText(chave).then(() => {
+        alert("Chave Pix copiada com sucesso! 💖");
+      });
+    }
+  </script>
+
+</body>
+</html>
