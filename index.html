@@ -6,12 +6,13 @@
   <title>Casamento Katiely e Matheus</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            cursiva: ['"Great Vibes"', 'cursive']
+            cursiva: ['"Great Vibes"', 'cursive', 'roboto']
           }
         }
       }
@@ -23,61 +24,142 @@
   <!-- MENU FIXO NO TOPO -->
   <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
     <nav class="max-w-5xl mx-auto flex justify-end space-x-6 py-4 px-6">
+      <a href="paginas.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">
+        Páginas
+      </a>
       <a href="lista-de-presentes.html" class="bg-pink-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-600 transition">
         Lista de Presentes
       </a>
       <a href="confirmar-presenca.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">
         Confirmar Presença
       </a>
+    
     </nav>
   </header>
 
   <!-- Espaço para conteúdo não ficar escondido atrás do menu fixo -->
   <div class="pt-16"></div>
 
-  <!-- IMAGEM DO CASAL NO TOPO -->
+ <!-- IMAGEM DO CASAL NO TOPO -->
   <section class="relative bg-gray-100 py-10">
     <img
       src="images/MK.jfif"
       alt="Matheus e Katiely"
       class="w-full max-w-3xl h-auto mx-auto block object-cover rounded shadow"
-    />
-    <!-- Nome do casal sobre a imagem -->
-    <div class="absolute bottom-4 right-4 bg-white/80 text-gray-900 px-4 py-2 rounded shadow text-2xl font-cursiva">
-      Matheus & Katiely
-    </div>
-  </section>
+/>
+
+  <!-- IMAGEM DO CASAL NO TOPO 
+ <section class="relative w-full">
+  <img
+    src="images/MK.jfif"
+    alt="Matheus e Katiely"
+    class="w-full h-auto object-cover"-->
+  />
+
+  <!-- Nome do casal sobre a imagem -->
+  <div class="absolute bottom-4 right-0 bg-white/80 text-gray-900 px-4 py-2 rounded shadow text-2xl font-cursiva">
+    Matheus & Katiely
+  </div>
+</section>
 
   <!-- CONTADOR ESTILIZADO -->
+<<<<<<< HEAD
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contador Retroativo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .timer-box {
+      background-color: #91A8D0;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      position: relative;
+    }
+=======
   <section class="bg-[#4972c1] py-12 flex flex-col items-center flex-col items-center">
     <h2 class="text-white text-4xl font-semibold mb-8 drop-shadow-lg">Faltam</h2>
+>>>>>>> 418e8bd3adf3f41561ef87f93a50bc721fff20d6
 
-    <div
-      id="contadorDias"
-      class="bg-white bg-opacity-90 rounded-xl shadow-xl px-14 py-8 flex flex-col items-center w-48"
-    >
-      <span
-        id="diasRestantes"
-        class="text-7xl font-extrabold text-indigo-700 font-cursiva select-none"
-        style="font-family: 'Great Vibes', cursive;"
-      >
-        0
-      </span>
-      <span class="mt-2 text-indigo-600 uppercase tracking-widest font-semibold select-none">
-        Dias
-      </span>
+    .timer-box::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: white;
+      transform: translateY(-50%);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body class="bg-amber-50 font-sans text-center p-10">
+
+  <h2 class="text-center tracking-widest text-lg text-gray-600 mb-6">Faltam:</h2>
+
+  <div class="flex justify-center gap-6 mb-2">
+    <div>
+      <div id="dias" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Dias</span>
     </div>
+    <div>
+      <div id="horas" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Horas</span>
+    </div>
+    <div>
+      <div id="minutos" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Minutos</span>
+    </div>
+    <div>
+      <div id="segundos" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Segundos</span>
+    </div>
+  </div>
 
-    <p class="text-white mt-6 text-center max-w-xs font-medium drop-shadow-md">
-      para o grande dia de Matheus & Katiely 💍
-    </p>
-  </section>
+  <script>
+    // Defina a data de início do contador (ex: a data do casamento passado)
+    const dataInicio = new Date("2025-10-24T18:30:00"); // exemplo
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = dataInicio - agora;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("dias").textContent = dias;
+      document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
+      document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
+      document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
+</body>
+</html>
+
 
   <!-- Cabeçalho principal -->
+<<<<<<< HEAD
+  <header style="background-color:#FFFF;" class="py-12 text-center shadow-md mt-16">
+  <h1 class="text-base font-roboto text-pink-700">Sejam bem vindos ao nosso site!</h1>
+    <p class="mt-2 text-base italic">A MELHOR FORMA DE COMPARTILHAR ESSE MOMENTO COM VOCÊS É UNINDO SONHOS</p>
+    <p class="mt-1 text-base text-pink-600">24 de Outubro de 2025</p>
+=======
   <header style="background-color: #92A8D1;" class="py-12 text-center shadow-md mt-16">
     <h1 class="text-4xl font-serif text-pink-700">SEJAM BEM VINDOS AO NOSSO SITE!</h1>
     <p class="mt-2 text-lg italic">A MELHOR FORMA DE COMPARTILHAR ESSE MOMENTO COM VOCÊS É UNINDO SONHOS</p>
     <p class="mt-1 text-sm text-pink-600">24 de Outubro de 2025</p>
+>>>>>>> 418e8bd3adf3f41561ef87f93a50bc721fff20d6
   </header>
 
   <!-- Sobre nós -->
