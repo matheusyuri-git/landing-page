@@ -53,8 +53,8 @@
   <img
     src="images/MK.jfif"
     alt="Matheus e Katiely"
-    class="w-full h-auto object-cover"-->
-  />
+    class="w-full h-auto object-cover"
+  />-->
 
   <!-- Nome do casal sobre a imagem -->
   <div class="absolute bottom-4 right-0 bg-white/80 text-gray-900 px-4 py-2 rounded shadow text-2xl font-cursiva">
@@ -63,7 +63,6 @@
 </section>
 
   <!-- CONTADOR ESTILIZADO -->
-<<<<<<< HEAD
   <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -81,10 +80,6 @@
       border-radius: 6px;
       position: relative;
     }
-=======
-  <section class="bg-[#4972c1] py-12 flex flex-col items-center flex-col items-center">
-    <h2 class="text-white text-4xl font-semibold mb-8 drop-shadow-lg">Faltam</h2>
->>>>>>> 418e8bd3adf3f41561ef87f93a50bc721fff20d6
 
     .timer-box::after {
       content: "";
@@ -149,17 +144,10 @@
 
 
   <!-- Cabeçalho principal -->
-<<<<<<< HEAD
   <header style="background-color:#FFFF;" class="py-12 text-center shadow-md mt-16">
   <h1 class="text-base font-roboto text-pink-700">Sejam bem vindos ao nosso site!</h1>
     <p class="mt-2 text-base italic">A MELHOR FORMA DE COMPARTILHAR ESSE MOMENTO COM VOCÊS É UNINDO SONHOS</p>
     <p class="mt-1 text-base text-pink-600">24 de Outubro de 2025</p>
-=======
-  <header style="background-color: #92A8D1;" class="py-12 text-center shadow-md mt-16">
-    <h1 class="text-4xl font-serif text-pink-700">SEJAM BEM VINDOS AO NOSSO SITE!</h1>
-    <p class="mt-2 text-lg italic">A MELHOR FORMA DE COMPARTILHAR ESSE MOMENTO COM VOCÊS É UNINDO SONHOS</p>
-    <p class="mt-1 text-sm text-pink-600">24 de Outubro de 2025</p>
->>>>>>> 418e8bd3adf3f41561ef87f93a50bc721fff20d6
   </header>
 
   <!-- Sobre nós -->
@@ -284,27 +272,6 @@
     }
   });
 </script>
-
-  <!-- SCRIPT CONTAGEM -->
-  <script>
-    const eventoData = new Date("2025-10-24T00:00:00").getTime();
-
-    function atualizarDias() {
-      const agora = new Date().getTime();
-      const diferenca = eventoData - agora;
-
-      if (diferenca <= 0) {
-        document.getElementById("diasRestantes").innerText = "0";
-        return;
-      }
-
-      const dias = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
-      document.getElementById("diasRestantes").innerText = dias;
-    }
-
-    atualizarDias();
-    setInterval(atualizarDias, 3600000);
-  </script>
 
 </body>
 </html>
