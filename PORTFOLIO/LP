@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NextBI | Soluções Estratégicas</title>
+  <style>
+    /* Importa a fonte Nunito Bold */
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+    :root {
+      --azul-escuro: #0A1F44;
+      --branco: #ffffff;
+      --cinza-claro: #f5f5f5;
+      --cinza-texto: #555555;
+      --amarelo-logo: #FFBF00;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--branco);
+      color: var(--azul-escuro);
+    }
+    .hero {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 10px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    /* Container vertical para logo + subtítulo com espaçamento pequeno */
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px; /* espaçamento menor */
+    }
+    /* Estilos da logo em texto */
+    .logo {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      display: flex;
+      gap: 0;
+    }
+    .bee {
+      color: var(--amarelo-logo); /* amarelo */
+    }
+    .flow {
+      color: var(--branco); /* branco */
+    }
+    .subtitle {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--branco);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0;
+      line-height: 1; /* linha compacta */
+    }
+    .nav-menu ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-menu ul li a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .nav-menu ul li a.active,
+    .nav-menu ul li a:hover {
+      color: var(--amarelo-logo);
+      text-decoration: underline;
+    }
+    .portfolio {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .portfolio h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .project-card {
+      background-color: var(--cinza-claro);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      transition: transform 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      color: var(--azul-escuro);
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .project-card p {
+      color: var(--cinza-texto);
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      iframe {
+        height: 400px;
+      }
+      .container {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .nav-menu ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .logo-container {
+        align-items: center; /* centraliza logo e subtítulo em telas pequenas */
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <div class="logo-container">
+      <div class="logo">
+        <span class="bee">Next</span><span class="flow">BI</span>
+      </div>
+      <div class="subtitle">Business Intelligence</div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" class="active">Página Inicial</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Serviços e Soluções</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="portfolio">
+  <h2>Projetos em Destaque</h2>
+
+  <div class="project-card">
+    <h3>Painel de Gestão Hospitalar</h3>
+    <p>Análise interativa sobre os indicadores de um hospital, tais como: Glosas, Atendimentos, Senhas, Faturamento e pesquisa de satisfação. Com ele a gestão ganha clareza
+        nos números, identificação de gargalos, apoio na tomada de decisões e uma visão integrada da operação. </p>
+    <iframe title="PAINEL DE GESTÃO HOSPITALAR" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZjdmYWYwNzMtNjM4YS00NGNmLWI3YzEtOTIyNjRmMjllZjk3IiwidCI6ImQ4MTM5OWUwLTY5ODctNGU1My04MDAyLTQ5NDdkYzgwMmMwMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+  </div>
+
+  <div class="project-card">
+    <h3>Gestão Comercial</h3>
+    <p>Relatório dinâmico de análise comercial com foco nos indicadores de Receita Total, Quantidade Vendida e Ticket Médio, Faturamento ao longo do tempo, Análises por região,
+        Representatividade por categoria, Ranking de Lojas, Detalhamento por produto. Usar esse dashboard proporciona a otimização de estratégias comerciais, direcionamento de 
+        campanhas com foco em regiões e produtos, e análise de resultados com autonomia e segurança.</p>
+    <iframe title="DASHBOARD COMERCIAL" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZmQ0YWM2YTItYzU1ZC00YzE2LThiNWMtNTQzMDYyNDNkMjc4IiwidCI6ImQ4MTM5OWUwLTY5ODctNGU1My04MDAyLTQ5NDdkYzgwMmMwMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+  </div>
+
+  <div class="project-card">
+    <h3>Indicadores de RH</h3>
+    <p>Monitoramento de admissões, rotatividade, absenteísmo e desempenho dos colaboradores.</p>
+    <iframe src="https://app.powerbi.com/reportEmbed?reportId=SEU_REPORT_ID&autoAuth=true&ctid=SEU_TENANT_ID" allowFullScreen="true"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 NextBI | Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

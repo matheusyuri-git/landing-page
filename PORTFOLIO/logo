@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Logo BeeFlow - Nunito Bold</title>
+<style>
+  /* Importa a fonte Nunito Bold do Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+  body {
+    background-color: #FFBF00;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .logo {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+  }
+  .bee {
+    color: #000000; /* amarelo dourado */
+  }
+  .flow {
+    color: #FFFFFF; /* branco */
+  }
+  .subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: -10px;
+  }
+</style>
+</head>
+<body>
+  <div class="logo">
+    <span class="bee">Next</span><span class="flow">BI</span>
+  </div>
+  <div class="subtitle">Business Intelligence</div>
+</body>
+</html>
+
+
+<!--CODIGO ANTES DA LOGO DA LP-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NextBI | Soluções Estratégicas</title>
+  <style>
+    :root {
+      --azul-escuro: #0A1F44;
+      --branco: #ffffff;
+      --cinza-claro: #f5f5f5;
+      --cinza-texto: #555555;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--branco);
+      color: var(--azul-escuro);
+    }
+    .hero {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .portfolio {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .portfolio h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .project-card {
+      background-color: var(--cinza-claro);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      transition: transform 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      color: var(--azul-escuro);
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .project-card p {
+      color: var(--cinza-texto);
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 600px; /* área maior para o painel */
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      iframe {
+        height: 400px; /* ajuste para telas pequenas */
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <div class="logo">
+      <!-- Coloque aqui a imagem ou o texto da logo BeeFlow -->
+      <img src="logo-beeflow.png" alt="BeeFlow Logo" />
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#" class="active">Página Inicial</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Serviços e Soluções</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .hero {
+    background-color: #0A1F44; /* azul escuro */
+    padding: 10px 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo img {
+    height: 40px; /* ajuste conforme seu logo */
+  }
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-menu ul li a {
+    color: #fff; /* branco */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .nav-menu ul li a.active,
+  .nav-menu ul li a:hover {
+    color: #febe10; /* amarelo da logo */
+    text-decoration: underline;
+  }
+</style>
+
+  <section class="portfolio">
+    <h2>Projetos em Destaque</h2>
+
+    <div class="project-card">
+      <h3>Painel de Gestão Hospitalar</h3>
+      <p>Análise interativa de vendas mensais, produtos mais vendidos e performance por região.</p>
+      <!-- Substitua a URL abaixo pela URL do seu painel embed do Power BI -->
+    <iframe title="PAINEL DE GESTÃO HOSPITALAR" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZjdmYWYwNzMtNjM4YS00NGNmLWI3YzEtOTIyNjRmMjllZjk3IiwidCI6ImQ4MTM5OWUwLTY5ODctNGU1My04MDAyLTQ5NDdkYzgwMmMwMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+
+    <div class="project-card">
+      <h3>Gestão Comercial</h3>
+      <p>Relatório dinâmico de fluxo de caixa, despesas por categoria e metas financeiras.</p>
+    <iframe title="DASHBOARD COMERCIAL" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZmQ0YWM2YTItYzU1ZC00YzE2LThiNWMtNTQzMDYyNDNkMjc4IiwidCI6ImQ4MTM5OWUwLTY5ODctNGU1My04MDAyLTQ5NDdkYzgwMmMwMCJ9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+
+    <div class="project-card">
+      <h3>Indicadores de RH</h3>
+      <p>Monitoramento de admissões, rotatividade, absenteísmo e desempenho dos colaboradores.</p>
+      <iframe src="https://app.powerbi.com/reportEmbed?reportId=SEU_REPORT_ID&autoAuth=true&ctid=SEU_TENANT_ID" allowFullScreen="true"></iframe>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NextBI | Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
