@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>BeeFlow - Business Intelligence</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: #000;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span:first-child {
+      color: #ffcc00;
+    }
+
+    .logo span:last-child {
+      color: #fff;
+    }
+
+    .subtitle {
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: #ccc;
+    }
+
+    .nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #ffcc00;
+    }
+
+    .nav a.active {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <div class="logo">
+        <span>Bee</span><span>Flow</span>
+      </div>
+      <div class="subtitle">BUSINESS INTELLIGENCE</div>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="active">Página Inicial</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Serviços e Soluções</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <div class="slider-wrapper">
+    <button class="arrow left" onclick="scrollSlides(-1)">&#8592;</button>
+
+    <div class="slider" id="slider">
+      <style>
+        .slider-wrapper {
+          position: relative;
+          overflow: hidden;
+          padding: 60px 40px;
+          /* ADICIONADO */
+          max-width: 1200px;
+          margin: 0 auto;
+          box-sizing: border-box;
+        }
+
+        .slider {
+          display: flex;
+          gap: 60px;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          padding-bottom: 20px;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        .slider::-webkit-scrollbar {
+          display: none;
+        }
+
+        .slide {
+          flex: 0 0 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          scroll-snap-align: start;
+          background-color: #fff;
+          border-radius: 20px;
+          padding: 40px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .slide-text {
+          max-width: 600px;
+        }
+
+        .slide-text h1 {
+          font-size: 3rem;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+
+        .slide-text h1 span {
+          color: #ffcc00;
+          font-weight: bold;
+        }
+
+        .slide-text p {
+          font-size: 1.1rem;
+          color: #111;
+          font-weight: bold;
+        }
+
+        .slide-image img {
+          max-width: 400px;
+          border-radius: 20px;
+        }
+
+        .arrow {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 2rem;
+          background: none;
+          border: none;
+          color: #111;
+          cursor: pointer;
+          z-index: 10;
+        }
+
+        .arrow.left {
+          left: 10px;
+        }
+
+        .arrow.right {
+          right: 10px;
+        }
+
+        @media (max-width: 768px) {
+          .slide {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          .arrow {
+            display: none;
+          }
+
+          .slide-image img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      </style>
+
+      <div class="slide">
+        <div class="slide-text">
+          <h1>Você com uma<br>visão real do<br>seu <span>negócio</span></h1>
+          <p>Tome as decisões da sua empresa<br>baseadas em indicadores.</p>
+        </div>
+        <div class="slide-image">
+          <img src="images/DASHBOARD.png" alt="Dashboard Power BI">
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-text">
+          <h1>Transforme dados<br>em <span>estratégias</span> eficazes</h1>
+          <p>Visualize tendências, monitore KPIs<br>e impulsione resultados.</p>
+        </div>
+        <div class="slide-image">
+          <img src="images/DASHBOARD.png" alt="Dashboard Estratégico">
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow right" onclick="scrollSlides(1)">&#8594;</button>
+  </div>
+
+  <script>
+    const slider = document.getElementById('slider');
+
+    function scrollSlides(direction) {
+      const scrollAmount = slider.clientWidth;
+      slider.scrollLeft += direction * scrollAmount;
+    }
+
+    setInterval(() => {
+      const scrollAmount = slider.clientWidth;
+      const maxScroll = slider.scrollWidth - scrollAmount;
+      
+      if (slider.scrollLeft >= maxScroll) {
+        slider.scrollLeft = 0;
+      } else {
+        slider.scrollLeft += scrollAmount;
+      }
+    }, 5000);
+  </script>
+
+  <section class="section-sobre">
+    <div class="text">
+      <h2>O que <span>fazemos</span>?</h2>
+      <p>
+        Na BeeFlow, desenvolvemos soluções tecnológicas personalizadas para atender às necessidades específicas do seu negócio, otimizando processos e acelerando a tomada de decisões. Com expertise em Business Intelligence, Analytics e Engenharia de Software, criamos dashboards, automações e sistemas integrados para potencializar o crescimento da sua empresa.
+      </p>
+      <p>
+        Acreditamos que cada empresa é única, por isso, entregamos soluções sob medida que garantem que seus dados e tecnologias trabalhem juntos para gerar resultados concretos.
+      </p>
+    </div>
+    <div class="image">
+      <img src="images/nextbi-logo.png" alt="Logo NextBI" />
+    </div>
+  </section>
+
+  <style>
+    .section-sobre {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 40px;
+      gap: 40px;
+      background-color: #fff;
+      flex-wrap: wrap;
+      /* ADICIONADO */
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .section-sobre .text {
+      flex: 1 1 500px;
+    }
+
+    .section-sobre .text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .section-sobre .text h2 span {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .section-sobre .text p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .section-sobre .text p + p {
+      margin-top: 20px;
+    }
+
+    .section-sobre .image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .section-sobre .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 768px) {
+      .section-sobre {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section-sobre .text,
+      .section-sobre .image {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+
+  <!-- As demais seções do seu código continuam aqui, sem alteração -->
+</body>
+</html>

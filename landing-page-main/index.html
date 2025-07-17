@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casamento Katiely e Matheus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cursiva: ['"Great Vibes"', 'cursive', 'roboto']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-pink-50 font-sans text-gray-800">
+
+  <!-- MENU FIXO NO TOPO -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <nav class="max-w-5xl mx-auto flex justify-end space-x-6 py-4 px-6">
+      <a href="paginas.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">
+        Páginas
+      </a>
+      <a href="lista-de-presentes.html" class="bg-pink-500 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-600 transition">
+        Lista de Presentes
+      </a>
+      <a href="confirmar-presenca.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition">
+        Confirmar Presença
+      </a>
+    
+    </nav>
+  </header>
+
+  <!-- Espaço para conteúdo não ficar escondido atrás do menu fixo -->
+  <div class="pt-16"></div>
+
+ <!-- IMAGEM DO CASAL NO TOPO -->
+  <section class="relative bg-gray-100 py-10">
+    <img
+      src="images/MK.jfif"
+      alt="Matheus e Katiely"
+      class="w-full max-w-3xl h-auto mx-auto block object-cover rounded shadow"
+/>
+
+  <!-- IMAGEM DO CASAL NO TOPO 
+ <section class="relative w-full">
+  <img
+    src="images/MK.jfif"
+    alt="Matheus e Katiely"
+    class="w-full h-auto object-cover"
+  />-->
+
+  <!-- Nome do casal sobre a imagem -->
+  <div class="absolute bottom-4 right-0 bg-white/80 text-gray-900 px-4 py-2 rounded shadow text-2xl font-cursiva">
+    Matheus & Katiely
+  </div>
+</section>
+
+  <!-- CONTADOR ESTILIZADO -->
+  <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contador Retroativo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .timer-box {
+      background-color: #91A8D0;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      position: relative;
+    }
+
+    .timer-box::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: white;
+      transform: translateY(-50%);
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body class="bg-amber-50 font-sans text-center p-10">
+
+  <h2 class="text-center tracking-widest text-lg text-gray-600 mb-6">Faltam:</h2>
+
+  <div class="flex justify-center gap-6 mb-2">
+    <div>
+      <div id="dias" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Dias</span>
+    </div>
+    <div>
+      <div id="horas" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Horas</span>
+    </div>
+    <div>
+      <div id="minutos" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Minutos</span>
+    </div>
+    <div>
+      <div id="segundos" class="timer-box">0</div>
+      <span class="mt-2 block text-sm text-gray-800">Segundos</span>
+    </div>
+  </div>
+
+  <script>
+    // Defina a data de início do contador (ex: a data do casamento passado)
+    const dataInicio = new Date("2025-10-24T18:30:00"); // exemplo
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = dataInicio - agora;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("dias").textContent = dias;
+      document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
+      document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
+      document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
+</body>
+</html>
+
+
+  <!-- Cabeçalho principal -->
+  <header style="background-color:#FFFF;" class="py-12 text-center shadow-md mt-16">
+  <h1 class="text-base font-roboto text-pink-700">Sejam bem vindos ao nosso site!</h1>
+    <p class="mt-2 text-base italic">A MELHOR FORMA DE COMPARTILHAR ESSE MOMENTO COM VOCÊS É UNINDO SONHOS</p>
+    <p class="mt-1 text-base text-pink-600">24 de Outubro de 2025</p>
+  </header>
+
+  <!-- Sobre nós -->
+  <section class="max-w-3xl mx-auto mt-16 px-6">
+    <h2 class="text-3xl font-semibold mb-4 text-pink-600">VAMOS CASAR!!!!</h2>
+    <p class="text-gray-700 leading-relaxed">
+    A contagem regressiva já começou! Estamos animados e gratos por compartilhar esse momento especial com vocês, 
+    no dia em que vamos nos unir no santo matrimônio. 
+    
+    Para acessar outras seções do site, como a lista de presentes, basta clicar no menu localizado no canto superior
+    desta página. 
+    Com todo carinho,
+    
+    Katiely e Matheus💗
+    </p>
+
+  <!-- Mensagem de carinho -->
+  <p class="text-center max-w-2xl text-lg mb-8 italic drop-shadow-md">
+    Estamos presentes em dois lugares especiais, esperando por você com muito carinho e dedicação. 💙
+  </p>
+
+ <section class="bg-[#4972c1] py-12 flex flex-col items-center">
+  <h2 class="text-white text-2xl font-bold mb-8">Localizações</h2>
+
+  <div class="flex flex-col md:flex-row gap-6 w-full max-w-6xl px-4">
+    <!-- Localização 1 -->
+    <div class="flex-1 h-80">
+      <iframe
+        class="w-full h-full rounded-lg shadow-lg"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.6548915783596!2d-48.09833270000001!3d-15.874725499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bd2a2941cc9f5%3A0x1bba9e4d5dcf7984!2zUGFyw7NxdWlhIFPDo28gSm_Do28gRXZhbmdlbGlzdGE!5e0!3m2!1spt-BR!2sbr!4v1750900536935!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Localização 2 -->
+    <div class="flex-1 h-80">
+      <iframe
+        class="w-full h-full rounded-lg shadow-lg"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.685054103258!2d-48.057766900000004!3d-15.873141899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2dd54ae9a405%3A0x3ab22742c1f90be!2sVilla%20Ros%C3%A9%20-%20Espa%C3%A7o%20de%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1750900966286!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Espaçamento entre seções -->
+<div class="pt-16"></div>
+
+<section class="bg-[#4972c1] py-12 px-4 flex flex-col items-center text-white">
+  <h2 class="text-3xl font-bold mb-4">Deixe sua mensagem para os noivos 💌</h2>
+
+
+  <!-- Formulário -->
+  <form id="mensagemForm" class="w-full max-w-xl bg-white rounded-lg p-6 text-black shadow-md mb-8">
+    <div class="mb-4">
+      <label class="block mb-1 font-medium">Seu nome:</label>
+      <input
+        type="text"
+        id="nome"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        placeholder="Ex: Ana e João"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block mb-1 font-medium">Sua mensagem:</label>
+      <textarea
+        id="mensagem"
+        class="w-full px-4 py-2 border border-gray-300 rounded-md"
+        rows="3"
+        placeholder="Desejamos toda felicidade do mundo!"
+        required
+      ></textarea>
+    </div>
+    <button
+      type="submit"
+      class="bg-[#4972c1] text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition"
+    >
+      Enviar Mensagem
+    </button>
+  </form>
+
+  <!-- Lista de mensagens -->
+  <div id="mensagensContainer" class="w-full max-w-xl space-y-4">
+    <!-- Mensagens aparecerão aqui -->
+  </div>
+</section>
+
+<!-- Script JavaScript -->
+<script>
+  const form = document.getElementById('mensagemForm');
+  const nomeInput = document.getElementById('nome');
+  const mensagemInput = document.getElementById('mensagem');
+  const mensagensContainer = document.getElementById('mensagensContainer');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nome = nomeInput.value.trim();
+    const mensagem = mensagemInput.value.trim();
+
+    if (nome && mensagem) {
+      const mensagemCard = document.createElement('div');
+      mensagemCard.className = 'bg-white text-black p-4 rounded-lg shadow';
+
+      mensagemCard.innerHTML = `
+        <p class="font-semibold text-[#4972c1] mb-1">${nome}</p>
+        <p class="italic">"${mensagem}"</p>
+      `;
+
+      mensagensContainer.prepend(mensagemCard); // adiciona no topo
+
+      // Limpar campos
+      nomeInput.value = '';
+      mensagemInput.value = '';
+    }
+  });
+</script>
+
+</body>
+</html>
